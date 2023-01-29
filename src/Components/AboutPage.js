@@ -1,14 +1,18 @@
 import * as React from "react";
-import logo03 from "../images/logo03.svg";
-import logo04 from "../images/logo04.svg";
-import logo05 from "../images/logo05.png";
-import logo06 from "../images/logo06.svg";
-import JavascriptIcon from "@mui/icons-material/Javascript";
 import Box from "@mui/material/Box";
+import { Grid } from "@mui/material";
 import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
+import logo03 from "../images/logo03.svg";
+import logo04 from "../images/logo04.svg";
+import logo05 from "../images/logo05.png";
+import logo06 from "../images/logo06.svg";
+import nextJS from "../images/nextJs.png";
+import JavascriptIcon from "@mui/icons-material/Javascript";
+import gitlab from "../images/gitlab.svg";
+import StarIcon from "@mui/icons-material/Star";
 
 export default function AboutPage() {
   const [value, setValue] = React.useState("1");
@@ -39,17 +43,17 @@ export default function AboutPage() {
             <Tab
               label="Education"
               value="1"
-              style={{ color: "white", width: "33%" }}
+              style={{ color: "white", width: "33%", textTransform: "none" }}
             />
             <Tab
               label="Experiance"
               value="2"
-              style={{ color: "white", width: "33%" }}
+              style={{ color: "white", width: "33%", textTransform: "none" }}
             />
             <Tab
-              label="Technologies"
+              label="Skill's"
               value="3"
-              style={{ color: "white", width: "33%" }}
+              style={{ color: "white", width: "33%", textTransform: "none" }}
             />
           </TabList>
         </Box>
@@ -61,14 +65,18 @@ export default function AboutPage() {
                   <Tab
                     label="Collage"
                     value="1"
-                    style={{ color: "white", width: "33%" }}
+                    style={{
+                      color: "white",
+                      width: "33%",
+                      textTransform: "none",
+                    }}
                   />
                 </TabList>
               </Box>
               <TabPanel
                 value="1"
                 style={{
-                  backgroundColor: "white",
+                  backgroundColor: "rgb(225 225 225)",
                   color: "#1662AE",
                   fontSize: "3vh",
                   fontWeight: "bolder",
@@ -98,21 +106,29 @@ export default function AboutPage() {
               <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
                 <TabList onChange={handleExpChange}>
                   <Tab
-                    label="InternShip"
+                    label="Internship"
                     value="1"
-                    style={{ color: "white", width: "33%" }}
+                    style={{
+                      color: "white",
+                      width: "33%",
+                      textTransform: "none",
+                    }}
                   />
                   <Tab
                     label="Job"
                     value="2"
-                    style={{ color: "white", width: "33%" }}
+                    style={{
+                      color: "white",
+                      width: "33%",
+                      textTransform: "none",
+                    }}
                   />
                 </TabList>
               </Box>
               <TabPanel
                 value="1"
                 style={{
-                  backgroundColor: "white",
+                  backgroundColor: "rgb(225 225 225)",
                   color: "#1662AE",
                   fontSize: "3vh",
                   fontWeight: "bolder",
@@ -121,7 +137,7 @@ export default function AboutPage() {
               >
                 <div
                   style={{
-                    backgroundColor: "white",
+                    backgroundColor: "rgb(225 225 225)",
                     color: "#0D0B89",
                     fontSize: "3vh",
                     fontWeight: "bolder",
@@ -148,7 +164,7 @@ export default function AboutPage() {
               <TabPanel
                 value="2"
                 style={{
-                  backgroundColor: "white",
+                  backgroundColor: "rgb(225 225 225)",
                   color: "#1662AE",
                   fontSize: "3vh",
                   fontWeight: "bolder",
@@ -157,7 +173,7 @@ export default function AboutPage() {
               >
                 <div
                   style={{
-                    backgroundColor: "white",
+                    backgroundColor: "rgb(225 225 225)",
                     color: "#252525",
                     fontSize: "3vh",
                     fontWeight: "bolder",
@@ -190,19 +206,135 @@ export default function AboutPage() {
               alignItems: "center",
             }}
           >
-            <br />
-            <JavascriptIcon sx={{ fontSize: "10vh" }} label="JavaScript" />
-            <br />
-            Java Script
-            <br />
-            <img
-              src={logo06}
-              alt="image"
-              style={{ width: "6vh", marginTop: "3vh" }}
-            />
-            <br />
-            ReactJs
-            <br />
+            <h1>Skills</h1>
+            <p>Here are some of my skills</p>
+            <div
+              style={{
+                display: " flex",
+                flexDirection: "row",
+                width: "100%",
+                alignItems: "center",
+              }}
+            >
+              <Grid
+                container
+                direction="column"
+                justifyContent="center"
+                alignItems="center"
+                backgroundColor="#202C33"
+                // maxWidth="10%"
+              >
+                <JavascriptIcon
+                  sx={{ fontSize: "12vh", margin: "0" }}
+                  label="JavaScript"
+                />
+                <span>Java Script</span>
+                <Grid
+                  container
+                  direction="row"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <StarIcon />
+                  <StarIcon />
+                  <StarIcon />
+                  <StarIcon />
+                  <StarIcon />
+                </Grid>
+              </Grid>
+              <Grid
+                container
+                direction="column"
+                justifyContent="center"
+                alignItems="center"
+                backgroundColor="#202C33"
+                // maxWidth="10%"
+              >
+                <img
+                  src={logo06}
+                  alt="image"
+                  style={{
+                    width: "8vh",
+                    marginTop: "3vh",
+                    marginBottom: "10px",
+                  }}
+                />
+                <span>ReactJs</span>
+                <Grid
+                  container
+                  direction="row"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <StarIcon />
+                  <StarIcon />
+                  <StarIcon />
+                  <StarIcon />
+                  <StarIcon />
+                </Grid>
+              </Grid>
+              <Grid
+                container
+                direction="column"
+                justifyContent="center"
+                alignItems="center"
+                backgroundColor="#202C33"
+                // maxWidth="10%"
+              >
+                <img
+                  src={gitlab}
+                  alt="image"
+                  style={{
+                    width: "8vh",
+                    marginTop: "3vh",
+                    marginBottom: "10px",
+                  }}
+                />
+                <span>Git</span>
+                <Grid
+                  container
+                  direction="row"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <StarIcon />
+                  <StarIcon />
+                  <StarIcon />
+                  <StarIcon />
+                  <StarIcon />
+                </Grid>
+              </Grid>
+              <Grid
+                container
+                direction="column"
+                justifyContent="center"
+                alignItems="center"
+                backgroundColor="#202C33"
+              >
+                <img
+                  src={nextJS}
+                  alt="image"
+                  style={{
+                    width: "8vh",
+                    marginTop: "3vh",
+                    marginBottom: "10px",
+                  }}
+                />
+                <span>NextJs</span>
+                <Grid
+                  container
+                  direction="row"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <StarIcon />
+                  <StarIcon />
+                  <StarIcon />
+                  <StarIcon />
+                  <StarIcon />
+                </Grid>
+              </Grid>
+            </div>
           </div>
         </TabPanel>
       </TabContext>

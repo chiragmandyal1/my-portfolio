@@ -3,12 +3,7 @@ import { Grid } from "@mui/material";
 
 export default function ProjectPage() {
   return (
-    <Grid
-      container
-      direction="column"
-      alignItems="center"
-      className="main-about"
-    >
+    <Grid container direction="column" alignItems="center">
       <h1>Projects</h1>
     </Grid>
   );

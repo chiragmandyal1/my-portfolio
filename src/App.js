@@ -1,53 +1,22 @@
 import "./App.css";
 import HomePage from "./Components/HomePage";
 import AboutPage from "./Components/AboutPage";
-import ContactPage from "./Components/ContactPage";
 import ProjectPage from "./Components/ProjectsPage";
 import ResumePage from "./Components/ResumePage";
-import { useState } from "react";
-import logo from "./images/logo.png";
 import Button from "@mui/material/Button";
 import { Grid } from "@mui/material";
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Tab from "@mui/material/Tab";
+import TabContext from "@mui/lab/TabContext";
+import TabList from "@mui/lab/TabList";
+import TabPanel from "@mui/lab/TabPanel";
 
 function App() {
-  const [Home, setHome] = useState(true);
-  const [About, setAbout] = useState(false);
-  const [Contact, setContact] = useState(false);
-  const [Cv, setCv] = useState(false);
-  const [Projects, setProjects] = useState(false);
-  function handleChange(type) {
-    if (type === "home") {
-      setAbout(false);
-      setContact(false);
-      setProjects(false);
-      setCv(false);
-      setHome(true);
-    } else if (type === "About") {
-      setHome(false);
-      setContact(false);
-      setProjects(false);
-      setCv(false);
-      setAbout(true);
-    } else if (type === "Contact") {
-      setHome(false);
-      setAbout(false);
-      setProjects(false);
-      setCv(false);
-      setContact(true);
-    } else if (type === "Resume") {
-      setHome(false);
-      setAbout(false);
-      setContact(false);
-      setProjects(false);
-      setCv(true);
-    } else {
-      setHome(false);
-      setAbout(false);
-      setContact(false);
-      setCv(false);
-      setProjects(true);
-    }
-  }
+  const [homeValue, setHomeValue] = React.useState("1");
+  const handleHomeChange = (event, newValue) => {
+    setHomeValue(newValue);
+  };
 
   return (
     <div className="app">
@@ -56,29 +25,41 @@ function App() {
         direction="row"
         justifyContent="space-between"
         alignItems="center"
-        className="main-navbar"
       >
-        <Grid item className="navbar-logo">
-          <Button>
-            <img src={logo} alt="image" />
-            <span>WhySoOpKratos</span>
-          </Button>
-        </Grid>
-        <Grid item className="navbar-title">
-          <ul>
-            <Button onClick={() => handleChange("home")}>Home</Button>
-            <Button onClick={() => handleChange("About")}>About</Button>
-            <Button onClick={() => handleChange("Contact")}>Contact</Button>
-            <Button onClick={() => handleChange("Resume")}>Resume</Button>
-            <Button onClick={() => handleChange("Projects")}>Projects</Button>
-          </ul>
-        </Grid>
+        <Box sx={{ width: "100%", typography: "body1" }}>
+          <TabContext value={homeValue}>
+            <Grid item className="main-navbar">
+              <Grid
+                container
+                direction="row"
+                justifyContent="space-between"
+                alignItems="center"
+                className="mainHeader"
+              >
+                <Button>WhySoOpKratos</Button>
+                <TabList onChange={handleHomeChange} className="tabList">
+                  <Tab label="Home" value="1" />
+                  <Tab label="About" value="2" />
+                  <Tab label="Resume" value="3" />
+                  <Tab label="Project" value="4" />
+                </TabList>
+              </Grid>
+            </Grid>
+            <TabPanel value="1">
+              <HomePage />
+            </TabPanel>
+            <TabPanel value="2">
+              <AboutPage />
+            </TabPanel>
+            <TabPanel value="3">
+              <ResumePage />
+            </TabPanel>
+            <TabPanel value="4">
+              <ProjectPage />
+            </TabPanel>
+          </TabContext>
+        </Box>
       </Grid>
-      {Home && <HomePage />}
-      {About && <AboutPage />}
-      {Contact && <ContactPage />}
-      {Cv && <ResumePage />}
-      {Projects && <ProjectPage />}
     </div>
   );
 }

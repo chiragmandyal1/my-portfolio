@@ -4,12 +4,7 @@ import Button from "@mui/material/Button";
 
 export default function ResumePage() {
   return (
-    <Grid
-      container
-      direction="column"
-      alignItems="center"
-      className="main-about"
-    >
+    <Grid container direction="column" alignItems="center">
       <h1>Resume</h1>
       <div>
         <a
