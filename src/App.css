@@ -45,3 +45,6 @@
 .app h1 {
   margin: 0%;
 }
+.app .resume button:hover {
+  background-color: White;
+}

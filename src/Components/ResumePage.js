@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 
 export default function ResumePage() {
   return (
-    <Grid container direction="column" alignItems="center">
+    <Grid container direction="column" alignItems="center" className="resume">
       <h1>Resume</h1>
       <div>
         <a
@@ -13,7 +13,14 @@ export default function ResumePage() {
         >
           <Button
             variant="contained"
-            sx={{ margin: "3vh", maxWidth: "20vh", maxHeight: "7vh" }}
+            sx={{
+              margin: "3vh",
+              maxWidth: "20vh",
+              maxHeight: "7vh",
+              backgroundColor: "white",
+              color: "black",
+              fontWeight: "600",
+            }}
           >
             Tap to download Resume
           </Button>
@@ -24,7 +31,14 @@ export default function ResumePage() {
         >
           <Button
             variant="contained"
-            sx={{ margin: "3vh", maxWidth: "20vh", maxHeight: "7vh" }}
+            sx={{
+              margin: "3vh",
+              maxWidth: "20vh",
+              maxHeight: "7vh",
+              backgroundColor: "white",
+              color: "black",
+              fontWeight: "600",
+            }}
           >
             Tap to download Cover Leter
           </Button>

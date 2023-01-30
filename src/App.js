@@ -19,7 +19,13 @@ function App() {
   };
 
   return (
-    <div className="app">
+    <Grid
+      container
+      direction="column"
+      justifyContent="space-between"
+      alignItems="center"
+      className="app"
+    >
       <Grid
         container
         direction="row"
@@ -60,7 +66,10 @@ function App() {
           </TabContext>
         </Box>
       </Grid>
-    </div>
+      <div style={{ marginBottom: "10%" }}>
+        <span>Copyright ©️ 2023 Chirag Mandyal. All Right Reserved</span>
+      </div>
+    </Grid>
   );
 }
 

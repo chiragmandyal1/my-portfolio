@@ -5,11 +5,14 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import MailIcon from "@mui/icons-material/Mail";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import copy from "copy-to-clipboard";
+import toast, { Toaster } from "react-hot-toast";
+
+const notify = () => toast("Email ID is copied to your clipboard");
 
 export default function HomePage() {
   const copyToClipboard = () => {
     copy("chiragmandyal82@gmail.com");
-    alert(`the email id is copied to your clipboard `);
+    notify();
   };
   return (
     <div className="main-about">
@@ -42,6 +45,7 @@ export default function HomePage() {
           </Button>
         </a>
       </div>
+      <Toaster />
     </div>
   );
 }
