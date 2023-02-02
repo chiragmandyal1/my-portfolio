@@ -46,12 +46,12 @@ export default function AboutPage() {
               style={{ color: "white", width: "33%", textTransform: "none" }}
             />
             <Tab
-              label="Experiance"
+              label="Experience"
               value="2"
               style={{ color: "white", width: "33%", textTransform: "none" }}
             />
             <Tab
-              label="Skill's"
+              label="Skills"
               value="3"
               style={{ color: "white", width: "33%", textTransform: "none" }}
             />

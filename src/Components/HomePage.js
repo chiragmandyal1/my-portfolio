@@ -36,9 +36,9 @@ export default function HomePage() {
         <h1>Chirag Mandyal</h1>
         <h1>Front-End Developer</h1>
         <p>
-          Enthusiastic and motivated self-learning in information Technology,
-          interested in exploring about Web Development. Now i am looking for
-          more experience in my field.
+          Enthusiastic and motivated self-learning in Information Technology,
+          interested in exploring about Web Development. Currently i am looking
+          to get more experience in my field.
         </p>
 
         <Button sx={{ color: "white" }} onClick={() => copyEmailToClipboard()}>
