@@ -1,6 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import { Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
@@ -63,7 +63,7 @@ export default function AboutPage() {
               <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
                 <TabList onChange={handleEduChange}>
                   <Tab
-                    label="Collage"
+                    label="College"
                     value="1"
                     style={{
                       color: "white",
@@ -160,6 +160,22 @@ export default function AboutPage() {
                   section, table etc. I was also responsible for integration
                   with the backend using RestAPIs.
                 </div>
+                <a
+                  href="https://crosscope.com/"
+                  style={{ textDecoration: "none", margin: "0" }}
+                >
+                  <Button
+                    variant="contained"
+                    sx={{
+                      margin: "3vh",
+                      maxWidth: "20vh",
+                      maxHeight: "7vh",
+                      fontWeight: "600",
+                    }}
+                  >
+                    Company Website
+                  </Button>
+                </a>
               </TabPanel>
               <TabPanel
                 value="2"
@@ -193,6 +209,38 @@ export default function AboutPage() {
                   end-to-end functionality of the extension like the UI the
                   background process and their whole working.
                 </div>
+                <a
+                  href="https://prospectss.com/"
+                  style={{ textDecoration: "none", margin: "0" }}
+                >
+                  <Button
+                    variant="contained"
+                    sx={{
+                      margin: "3vh",
+                      maxWidth: "20vh",
+                      maxHeight: "7vh",
+                      fontWeight: "600",
+                    }}
+                  >
+                    Company Website
+                  </Button>
+                </a>
+                <a
+                  href="https://gitlab.com/chiragmandyal85/private/-/raw/main/Renovus_Enterprise_Experience_Letter_For_Chirag_Mandyal.pdf?inline=false"
+                  style={{ textDecoration: "none", margin: "0" }}
+                >
+                  <Button
+                    variant="contained"
+                    sx={{
+                      margin: "3vh",
+                      maxWidth: "20vh",
+                      maxHeight: "7vh",
+                      fontWeight: "600",
+                    }}
+                  >
+                    Experience Letter
+                  </Button>
+                </a>
               </TabPanel>
             </TabContext>
           </Box>

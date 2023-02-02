@@ -11,6 +11,8 @@ import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import HomeIcon from "@mui/icons-material/Home";
 
 function App() {
   const [homeValue, setHomeValue] = React.useState("1");
@@ -42,9 +44,15 @@ function App() {
                 alignItems="center"
                 className="mainHeader"
               >
-                <Button>WhySoOpKratos</Button>
+                <Button disabled>
+                  <AccountCircleIcon
+                    sx={{ marginRight: "7px", fontSize: "3.5vh" }}
+                  />
+                  WhySoOpKratos
+                </Button>
                 <TabList onChange={handleHomeChange} className="tabList">
                   <Tab label="Home" value="1" />
+
                   <Tab label="About" value="2" />
                   <Tab label="Resume" value="3" />
                   <Tab label="Project" value="4" />

@@ -21,11 +21,8 @@ export default function HomePage() {
       </div>
       <div style={{ marginLeft: "10%" }}>
         <p>Hi , i'm</p>
-        <br />
         <h1>Chirag Mandyal</h1>
-        <br />
         <h1>Front-End Developer</h1>
-        <br />
         <p>
           Enthusiastic and motivated self-learning in information Technology.
           intrusted in exploring about Web Development. Now i am looking for
