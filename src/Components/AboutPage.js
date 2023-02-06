@@ -226,7 +226,7 @@ export default function AboutPage() {
                   </Button>
                 </a>
                 <a
-                  href="https://gitlab.com/chiragmandyal85/private/-/raw/main/Renovus_Enterprise_Experience_Letter_For_Chirag_Mandyal.pdf?inline=false"
+                  href="https://github.com/WhySoOpKratos/Experience_Letter/archive/refs/heads/main.zip"
                   style={{ textDecoration: "none", margin: "0" }}
                 >
                   <Button

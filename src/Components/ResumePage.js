@@ -8,7 +8,7 @@ export default function ResumePage() {
       <h1>Resume</h1>
       <div>
         <a
-          href="https://github.com/WhySoOpKratos/Documents/raw/main/Resume(Dec%2C2022).pdf"
+          href="https://github.com/WhySoOpKratos/Resume/archive/refs/heads/main.zip"
           style={{ textDecoration: "none" }}
         >
           <Button
@@ -26,7 +26,7 @@ export default function ResumePage() {
           </Button>
         </a>
         <a
-          href="https://github.com/WhySoOpKratos/Documents/raw/main/Cover%20Letter%20ReactJs%20Developer.pdf"
+          href="https://github.com/WhySoOpKratos/Cover-Letter/archive/refs/heads/main.zip"
           style={{ textDecoration: "none" }}
         >
           <Button
